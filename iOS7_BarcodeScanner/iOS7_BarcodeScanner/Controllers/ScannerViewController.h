@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
+@interface ScannerViewController : UIViewController
+@property (strong, nonatomic) NSMutableArray * allowedBarcodeTypes;
 
 @end

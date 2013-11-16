@@ -15,13 +15,14 @@
 		D41746AD1837E91900F83533 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746AC1837E91900F83533 /* AppDelegate.m */; };
 		D41746B01837E91900F83533 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41746AE1837E91900F83533 /* Main_iPhone.storyboard */; };
 		D41746B31837E91900F83533 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41746B11837E91900F83533 /* Main_iPad.storyboard */; };
-		D41746B61837E91900F83533 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746B51837E91900F83533 /* ViewController.m */; };
 		D41746B81837E91900F83533 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41746B71837E91900F83533 /* Images.xcassets */; };
 		D41746BF1837E91900F83533 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41746BE1837E91900F83533 /* XCTest.framework */; };
 		D41746C01837E91900F83533 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D417469C1837E91900F83533 /* Foundation.framework */; };
 		D41746C11837E91900F83533 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41746A01837E91900F83533 /* UIKit.framework */; };
 		D41746C91837E91900F83533 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D41746C71837E91900F83533 /* InfoPlist.strings */; };
 		D41746CB1837E91900F83533 /* iOS7_BarcodeScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746CA1837E91900F83533 /* iOS7_BarcodeScannerTests.m */; };
+		D41746D81837EA2900F83533 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746D71837EA2900F83533 /* ScannerViewController.m */; };
+		D41746DB1837EA5900F83533 /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746DA1837EA5900F83533 /* Barcode.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,14 +48,16 @@
 		D41746AC1837E91900F83533 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D41746AF1837E91900F83533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
 		D41746B21837E91900F83533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
-		D41746B41837E91900F83533 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		D41746B51837E91900F83533 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		D41746B71837E91900F83533 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D41746BD1837E91900F83533 /* iOS7_BarcodeScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS7_BarcodeScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41746BE1837E91900F83533 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D41746C61837E91900F83533 /* iOS7_BarcodeScannerTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "iOS7_BarcodeScannerTests-Info.plist"; sourceTree = "<group>"; };
 		D41746C81837E91900F83533 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D41746CA1837E91900F83533 /* iOS7_BarcodeScannerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = iOS7_BarcodeScannerTests.m; sourceTree = "<group>"; };
+		D41746D61837EA2900F83533 /* ScannerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ScannerViewController.h; path = Controllers/ScannerViewController.h; sourceTree = "<group>"; };
+		D41746D71837EA2900F83533 /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScannerViewController.m; path = Controllers/ScannerViewController.m; sourceTree = "<group>"; };
+		D41746D91837EA5900F83533 /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Barcode.h; path = Model/Barcode.h; sourceTree = "<group>"; };
+		D41746DA1837EA5900F83533 /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Barcode.m; path = Model/Barcode.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,12 +117,12 @@
 		D41746A21837E91900F83533 /* iOS7_BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				D41746D51837EA1A00F83533 /* Controllers */,
+				D41746D41837E9FD00F83533 /* Model */,
 				D41746AB1837E91900F83533 /* AppDelegate.h */,
 				D41746AC1837E91900F83533 /* AppDelegate.m */,
 				D41746AE1837E91900F83533 /* Main_iPhone.storyboard */,
 				D41746B11837E91900F83533 /* Main_iPad.storyboard */,
-				D41746B41837E91900F83533 /* ViewController.h */,
-				D41746B51837E91900F83533 /* ViewController.m */,
 				D41746B71837E91900F83533 /* Images.xcassets */,
 				D41746A31837E91900F83533 /* Supporting Files */,
 			);
@@ -153,6 +156,24 @@
 				D41746C71837E91900F83533 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D41746D41837E9FD00F83533 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D41746D91837EA5900F83533 /* Barcode.h */,
+				D41746DA1837EA5900F83533 /* Barcode.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		D41746D51837EA1A00F83533 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D41746D61837EA2900F83533 /* ScannerViewController.h */,
+				D41746D71837EA2900F83533 /* ScannerViewController.m */,
+			);
+			name = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -202,6 +223,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Jake Widmer";
 				TargetAttributes = {
+					D41746981837E91900F83533 = {
+						DevelopmentTeam = 696JWCZD9Y;
+					};
 					D41746BC1837E91900F83533 = {
 						TestTargetID = D41746981837E91900F83533;
 					};
@@ -253,8 +277,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41746B61837E91900F83533 /* ViewController.m in Sources */,
+				D41746DB1837EA5900F83533 /* Barcode.m in Sources */,
 				D41746AD1837E91900F83533 /* AppDelegate.m in Sources */,
+				D41746D81837EA2900F83533 /* ScannerViewController.m in Sources */,
 				D41746A91837E91900F83533 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -392,10 +417,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS7_BarcodeScanner/iOS7_BarcodeScanner-Prefix.pch";
 				INFOPLIST_FILE = "iOS7_BarcodeScanner/iOS7_BarcodeScanner-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -405,10 +433,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "iOS7_BarcodeScanner/iOS7_BarcodeScanner-Prefix.pch";
 				INFOPLIST_FILE = "iOS7_BarcodeScanner/iOS7_BarcodeScanner-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
