@@ -49,6 +49,7 @@
     [self setupCaptureSession];
     _previewLayer.frame = _previewView.bounds;
     [_previewView.layer addSublayer:_previewLayer];
+    self.foundBarcodes = [[NSMutableArray alloc] init];
     
     // listen for going into the background and stop the session
     [[NSNotificationCenter defaultCenter]
@@ -172,13 +173,13 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
              [_previewLayer transformedMetadataObjectForMetadataObject:obj];
              // 4
              Barcode * barcode = [Barcode processMetadataObject:code];
-
+             
              for(NSString * str in self.allowedBarcodeTypes){
-                 if([barcode.getBarcodeType isEqualToString:str]){
-                     [self validBarcodeFound:barcode];
-                     return;
-                 }
-             }
+                if([barcode.getBarcodeType isEqualToString:str]){
+                    [self validBarcodeFound:barcode];
+                    return;
+                }
+            }
          }
      }];
 }
@@ -189,18 +190,38 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     [self showBarcodeAlert:barcode];
 }
 - (void) showBarcodeAlert:(Barcode *)barcode{
-    
-    NSString * alertMessage = @"You found a barcode with type ";
-    [alertMessage stringByAppendingString:[barcode getBarcodeType]];
-    [alertMessage stringByAppendingString:@" and data "];
-    [alertMessage stringByAppendingString:[barcode getBarcodeData]];
-    
-    UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Barcode Found!"
-                                                      message:@"This is your first UIAlertview message."
-                                                     delegate:nil
-                                            cancelButtonTitle:@"Ok"
-                                            otherButtonTitles:nil];
-    [message show];
+    dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        // Code to do background processing
+        NSString * alertMessage = @"You found a barcode with type ";
+        alertMessage = [alertMessage stringByAppendingString:[barcode getBarcodeType]];
+//        alertMessage = [alertMessage stringByAppendingString:@" and data "];
+//        alertMessage = [alertMessage stringByAppendingString:[barcode getBarcodeData]];
+        alertMessage = [alertMessage stringByAppendingString:@"\n\nBarcode added to array of "];
+        alertMessage = [alertMessage stringByAppendingString:[NSString stringWithFormat:@"%lu",(unsigned long)[self.foundBarcodes count]-1]];
+        alertMessage = [alertMessage stringByAppendingString:@" previously found barcodes."];
+
+        
+        UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Barcode Found!"
+                                                          message:alertMessage
+                                                         delegate:self
+                                                cancelButtonTitle:@"Done"
+                                                otherButtonTitles:@"Scan again",nil];
+        dispatch_async( dispatch_get_main_queue(), ^{
+            // Code to update the UI/send notifications based on the results of the background processing
+            [message show];
+
+        });
+    });
+}
+- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
+    if (buttonIndex == 0){
+        //Code for Done button
+        // TODO: Create a finished view
+    }
+    if (buttonIndex == 1){
+        //Code for Scan more button
+        [self startRunning];
+    }
 }
 @end
 

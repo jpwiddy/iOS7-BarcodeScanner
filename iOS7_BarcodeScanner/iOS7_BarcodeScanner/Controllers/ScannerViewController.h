@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ScannerViewController : UIViewController
+@interface ScannerViewController : UIViewController<UIAlertViewDelegate>
 @property (strong, nonatomic) NSMutableArray * allowedBarcodeTypes;
 
 @end
