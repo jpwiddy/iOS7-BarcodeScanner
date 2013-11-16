@@ -17,7 +17,7 @@ Notes:
 - Sometimes it may require you to embed your ScannerViewController in a Navigation Controller in the storyboard
 - iOS 7+ only
 
-![preview](https://raw.github.com/jpwidmer/iOS7-BarcodeScanner/master/preview.png)
+![preview](https://raw.github.com/jpwidmer/iOS7-BarcodeScanner/master/iOS7_BarcodeScanner/preview.PNG)
 
 Coming soon:
 - Settings menu where you will be able to toggle on/off the barcode types which you want to be able to find
