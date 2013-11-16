@@ -188,7 +188,7 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
 }
 - (void) showBarcodeAlert:(Barcode *)barcode{
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        // Code to do background processing
+        // Code to do in background processing
         NSString * alertMessage = @"You found a barcode with type ";
         alertMessage = [alertMessage stringByAppendingString:[barcode getBarcodeType]];
 //        alertMessage = [alertMessage stringByAppendingString:@" and data "];
@@ -196,14 +196,15 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         alertMessage = [alertMessage stringByAppendingString:@"\n\nBarcode added to array of "];
         alertMessage = [alertMessage stringByAppendingString:[NSString stringWithFormat:@"%lu",(unsigned long)[self.foundBarcodes count]-1]];
         alertMessage = [alertMessage stringByAppendingString:@" previously found barcodes."];
-
         
         UIAlertView *message = [[UIAlertView alloc] initWithTitle:@"Barcode Found!"
                                                           message:alertMessage
                                                          delegate:self
                                                 cancelButtonTitle:@"Done"
                                                 otherButtonTitles:@"Scan again",nil];
-        dispatch_async( dispatch_get_main_queue(), ^{
+        
+        
+        dispatch_async(dispatch_get_main_queue(), ^{
             // Code to update the UI/send notifications based on the results of the background processing
             [message show];
 
@@ -211,11 +212,11 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     });
 }
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex{
-    if (buttonIndex == 0){
+    if(buttonIndex == 0){
         //Code for Done button
         // TODO: Create a finished view
     }
-    if (buttonIndex == 1){
+    if(buttonIndex == 1){
         //Code for Scan more button
         [self startRunning];
     }
