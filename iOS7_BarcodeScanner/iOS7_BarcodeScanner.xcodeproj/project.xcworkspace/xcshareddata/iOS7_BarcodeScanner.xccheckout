@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>11D9D7F1-8BD1-4B30-97F9-5E54DAA606C1</string>
+	<key>IDESourceControlProjectName</key>
+	<string>iOS7_BarcodeScanner</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DF401217-990B-490A-81D6-062AD613AE8A</key>
+		<string>https://github.com/jpwidmer/iOS7-BarcodeScanner.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS7_BarcodeScanner/iOS7_BarcodeScanner.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DF401217-990B-490A-81D6-062AD613AE8A</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jpwidmer/iOS7-BarcodeScanner.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DF401217-990B-490A-81D6-062AD613AE8A</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DF401217-990B-490A-81D6-062AD613AE8A</string>
+			<key>IDESourceControlWCCName</key>
+			<string>iOS7-BarcodeScanner</string>
+		</dict>
+	</array>
+</dict>
+</plist>
