@@ -9,7 +9,6 @@
 
 #import "ScannerViewController.h"
 #import "Barcode.h"
-#import <dispatch/dispatch.h>
 @import AVFoundation;   // iOS7 only import style
 
 @interface ScannerViewController ()
@@ -39,8 +38,6 @@
     AVCaptureVideoPreviewLayer *_previewLayer;
     BOOL _running;
     AVCaptureMetadataOutput *_metadataOutput;
-    dispatch_queue_t _backgroundQueue;
-
 }
 
 - (void)viewDidLoad {
