@@ -23,3 +23,6 @@ Coming soon:
 - Settings menu where you will be able to toggle on/off the barcode types which you want to be able to find
 - Finished with scanning view
 - Delegate protocol for returning the array of found barcodes to other ViewControllers
+
+
+NOTE: Code used in this example is used from a fine tutorial series covered in this book. Click the link to follow through - http://www.raywenderlich.com/store/ios-7-by-tutorials
