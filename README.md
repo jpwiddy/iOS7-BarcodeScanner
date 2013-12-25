@@ -20,7 +20,8 @@ Notes:
 - iOS 7+ only
 
 ![preview](https://raw.github.com/jpwidmer/iOS7-BarcodeScanner/master/iOS7_BarcodeScanner/preview.PNG)
-![preview](https://raw.github.com/jpwidmer/iOS7-BarcodeScanner/master/iOS7_BarcodeScanner/settings.PNG)
+
+![preview](https://raw.github.com/jpwidmer/iOS7-BarcodeScanner/master/iOS7_BarcodeScanner/settings.png)
 
 
 Coming soon:
