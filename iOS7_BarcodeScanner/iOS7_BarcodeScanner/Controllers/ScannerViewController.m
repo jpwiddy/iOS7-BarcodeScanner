@@ -16,10 +16,12 @@
 @property (strong, nonatomic) NSMutableArray * foundBarcodes;
 @property (weak, nonatomic) IBOutlet UIView *previewView;
 
+@property (strong, nonatomic) SettingsViewController * settingsVC;
+
 @end
 
 @implementation ScannerViewController{
-    /* Here’s a quick rundown of the instance variables:
+    /* Here’s a quick rundown of the instance variables (via 'iOS 7 By Tutorials'):
      
      1. _captureSession – AVCaptureSession is the core media handling class in AVFoundation. It talks to the hardware to retrieve, process, and output video. A capture session wires together inputs and outputs, and controls the format and resolution of the output frames.
      
@@ -60,7 +62,7 @@
      name:UIApplicationDidEnterBackgroundNotification
      object:nil];
     
-    // set default allowed barcode types, remove types if you don't want them to be able to be scanned in
+    // set default allowed barcode types, remove types via setings menu if you don't want them to be able to be scanned
     self.allowedBarcodeTypes = [NSMutableArray new];
     [self.allowedBarcodeTypes addObject:@"org.iso.QRCode"];
     [self.allowedBarcodeTypes addObject:@"org.iso.PDF417"];
@@ -150,7 +152,21 @@
     [self stopRunning];
 }
 
-#pragma mark - Delegate methods
+#pragma mark - Button action functions
+- (IBAction)settingsButtonPressed:(id)sender {
+    [self performSegueWithIdentifier:@"toSettings" sender:self];
+}
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    if ([[segue identifier] isEqualToString:@"toSettings"]) {
+        self.settingsVC = (SettingsViewController *)[self.storyboard instantiateViewControllerWithIdentifier: @"SettingsViewController"];
+        self.settingsVC = segue.destinationViewController;
+        self.settingsVC.delegate = self;
+    }
+}
+
+
+#pragma mark - Delegate functions
 
 - (void)captureOutput:(AVCaptureOutput *)captureOutput
 didOutputMetadataObjects:(NSArray *)metadataObjects
@@ -221,6 +237,16 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
         [self startRunning];
     }
 }
+
+- (void) settingsChanged:(NSMutableArray *)allowedTypes{
+    for(NSObject * obj in allowedTypes){
+        NSLog(@"%@",obj);
+    }
+    if(allowedTypes){
+        self.allowedBarcodeTypes = [NSMutableArray arrayWithArray:allowedTypes];
+    }
+}
+
 @end
 
 

@@ -14,7 +14,6 @@
 		D41746A91837E91900F83533 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746A81837E91900F83533 /* main.m */; };
 		D41746AD1837E91900F83533 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746AC1837E91900F83533 /* AppDelegate.m */; };
 		D41746B01837E91900F83533 /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41746AE1837E91900F83533 /* Main_iPhone.storyboard */; };
-		D41746B31837E91900F83533 /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D41746B11837E91900F83533 /* Main_iPad.storyboard */; };
 		D41746B81837E91900F83533 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D41746B71837E91900F83533 /* Images.xcassets */; };
 		D41746BF1837E91900F83533 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D41746BE1837E91900F83533 /* XCTest.framework */; };
 		D41746C01837E91900F83533 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D417469C1837E91900F83533 /* Foundation.framework */; };
@@ -23,6 +22,8 @@
 		D41746CB1837E91900F83533 /* iOS7_BarcodeScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746CA1837E91900F83533 /* iOS7_BarcodeScannerTests.m */; };
 		D41746D81837EA2900F83533 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746D71837EA2900F83533 /* ScannerViewController.m */; };
 		D41746DB1837EA5900F83533 /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746DA1837EA5900F83533 /* Barcode.m */; };
+		D45DF6C7186B82E8000C9DA4 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D45DF6C6186B82E8000C9DA4 /* SettingsViewController.m */; };
+		D45DF6C9186B83D6000C9DA4 /* settings_icon.png in Resources */ = {isa = PBXBuildFile; fileRef = D45DF6C8186B83D6000C9DA4 /* settings_icon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,7 +48,6 @@
 		D41746AB1837E91900F83533 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D41746AC1837E91900F83533 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D41746AF1837E91900F83533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
-		D41746B21837E91900F83533 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
 		D41746B71837E91900F83533 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		D41746BD1837E91900F83533 /* iOS7_BarcodeScannerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS7_BarcodeScannerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		D41746BE1837E91900F83533 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -58,6 +58,9 @@
 		D41746D71837EA2900F83533 /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScannerViewController.m; path = Controllers/ScannerViewController.m; sourceTree = "<group>"; };
 		D41746D91837EA5900F83533 /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Barcode.h; path = Model/Barcode.h; sourceTree = "<group>"; };
 		D41746DA1837EA5900F83533 /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Barcode.m; path = Model/Barcode.m; sourceTree = "<group>"; };
+		D45DF6C5186B82E8000C9DA4 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Controllers/SettingsViewController.h; sourceTree = "<group>"; };
+		D45DF6C6186B82E8000C9DA4 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Controllers/SettingsViewController.m; sourceTree = "<group>"; };
+		D45DF6C8186B83D6000C9DA4 /* settings_icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = settings_icon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,12 +120,12 @@
 		D41746A21837E91900F83533 /* iOS7_BarcodeScanner */ = {
 			isa = PBXGroup;
 			children = (
+				D45DF6C8186B83D6000C9DA4 /* settings_icon.png */,
 				D41746D51837EA1A00F83533 /* Controllers */,
 				D41746D41837E9FD00F83533 /* Model */,
 				D41746AB1837E91900F83533 /* AppDelegate.h */,
 				D41746AC1837E91900F83533 /* AppDelegate.m */,
 				D41746AE1837E91900F83533 /* Main_iPhone.storyboard */,
-				D41746B11837E91900F83533 /* Main_iPad.storyboard */,
 				D41746B71837E91900F83533 /* Images.xcassets */,
 				D41746A31837E91900F83533 /* Supporting Files */,
 			);
@@ -172,6 +175,8 @@
 			children = (
 				D41746D61837EA2900F83533 /* ScannerViewController.h */,
 				D41746D71837EA2900F83533 /* ScannerViewController.m */,
+				D45DF6C5186B82E8000C9DA4 /* SettingsViewController.h */,
+				D45DF6C6186B82E8000C9DA4 /* SettingsViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -255,7 +260,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D41746B31837E91900F83533 /* Main_iPad.storyboard in Resources */,
+				D45DF6C9186B83D6000C9DA4 /* settings_icon.png in Resources */,
 				D41746B81837E91900F83533 /* Images.xcassets in Resources */,
 				D41746B01837E91900F83533 /* Main_iPhone.storyboard in Resources */,
 				D41746A71837E91900F83533 /* InfoPlist.strings in Resources */,
@@ -279,6 +284,7 @@
 			files = (
 				D41746DB1837EA5900F83533 /* Barcode.m in Sources */,
 				D41746AD1837E91900F83533 /* AppDelegate.m in Sources */,
+				D45DF6C7186B82E8000C9DA4 /* SettingsViewController.m in Sources */,
 				D41746D81837EA2900F83533 /* ScannerViewController.m in Sources */,
 				D41746A91837E91900F83533 /* main.m in Sources */,
 			);
@@ -317,14 +323,6 @@
 				D41746AF1837E91900F83533 /* Base */,
 			);
 			name = Main_iPhone.storyboard;
-			sourceTree = "<group>";
-		};
-		D41746B11837E91900F83533 /* Main_iPad.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D41746B21837E91900F83533 /* Base */,
-			);
-			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
 		};
 		D41746C71837E91900F83533 /* InfoPlist.strings */ = {
@@ -424,6 +422,7 @@
 				INFOPLIST_FILE = "iOS7_BarcodeScanner/iOS7_BarcodeScanner-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -440,6 +439,7 @@
 				INFOPLIST_FILE = "iOS7_BarcodeScanner/iOS7_BarcodeScanner-Info.plist";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -505,6 +505,7 @@
 				D41746D01837E91900F83533 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D41746D11837E91900F83533 /* Build configuration list for PBXNativeTarget "iOS7_BarcodeScannerTests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +514,7 @@
 				D41746D31837E91900F83533 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
