@@ -20,6 +20,8 @@ Notes:
 - iOS 7+ only
 
 ![preview](https://raw.github.com/jpwidmer/iOS7-BarcodeScanner/master/iOS7_BarcodeScanner/preview.PNG)
+![preview](https://raw.github.com/jpwidmer/iOS7-BarcodeScanner/master/iOS7_BarcodeScanner/settings.PNG)
+
 
 Coming soon:
 - Settings menu where you will be able to toggle on/off the barcode types which you want to be able to find
