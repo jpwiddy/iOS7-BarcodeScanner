@@ -1,6 +1,8 @@
 iOS7-BarcodeScanner
 ===================
 
+NEW: Settings Menu Added! Ability to disable/enable barcode types which are able to be scanned
+
 Barcode scanner using the scanning capabilities introduced with iOS 7.
 
 The project as is goes straight into scanning mode to which it constantly looks for barcodes to be scanned. 
