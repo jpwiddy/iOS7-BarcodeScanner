@@ -25,7 +25,7 @@ Notes:
 
 
 Coming soon:
-- Settings menu where you will be able to toggle on/off the barcode types which you want to be able to find
+- ~~Settings menu where you will be able to toggle on/off the barcode types which you want to be able to find~~
 - Finished with scanning view
 - Delegate protocol for returning the array of found barcodes to other ViewControllers
 
