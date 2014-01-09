@@ -11,9 +11,9 @@ When an allowed barcode is found, it takes in the data, creates a Barcode object
 An alert is then presented telling the user the kind of barcode found, number of barcodes found in the past, and giving the option to scan again or be finished.
 
 To use: 
-- Add the Barcode.h & .c files to your project, as well as the ScannerViewController.h & .c.
+- Add the Barcode.h & .m files to your project, as well as the ScannerViewController.h & .m.
 - In your Storyboard, drag out a ViewController object and add a view to it. This view will be used as the preview/video layer.
-- Connect the "preview view" to the outlet/property named previewView in the ScannerViewController.c file.
+- Connect the "preview view" to the outlet/property named previewView in the ScannerViewController.m file.
 
 Notes: 
 - Sometimes it may require you to embed your ScannerViewController in a Navigation Controller in the storyboard
