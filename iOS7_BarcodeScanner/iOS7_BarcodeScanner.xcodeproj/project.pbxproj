@@ -22,6 +22,7 @@
 		D41746CB1837E91900F83533 /* iOS7_BarcodeScannerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746CA1837E91900F83533 /* iOS7_BarcodeScannerTests.m */; };
 		D41746D81837EA2900F83533 /* ScannerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746D71837EA2900F83533 /* ScannerViewController.m */; };
 		D41746DB1837EA5900F83533 /* Barcode.m in Sources */ = {isa = PBXBuildFile; fileRef = D41746DA1837EA5900F83533 /* Barcode.m */; };
+		D46D5E7C188DC18300E0DF31 /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D46D5E7B188DC18300E0DF31 /* SettingsViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +57,8 @@
 		D41746D71837EA2900F83533 /* ScannerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ScannerViewController.m; path = Controllers/ScannerViewController.m; sourceTree = "<group>"; };
 		D41746D91837EA5900F83533 /* Barcode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Barcode.h; path = Model/Barcode.h; sourceTree = "<group>"; };
 		D41746DA1837EA5900F83533 /* Barcode.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Barcode.m; path = Model/Barcode.m; sourceTree = "<group>"; };
+		D46D5E7A188DC18300E0DF31 /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = Controllers/SettingsViewController.h; sourceTree = "<group>"; };
+		D46D5E7B188DC18300E0DF31 /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = Controllers/SettingsViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -167,6 +170,8 @@
 		D41746D51837EA1A00F83533 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D46D5E7A188DC18300E0DF31 /* SettingsViewController.h */,
+				D46D5E7B188DC18300E0DF31 /* SettingsViewController.m */,
 				D41746D61837EA2900F83533 /* ScannerViewController.h */,
 				D41746D71837EA2900F83533 /* ScannerViewController.m */,
 			);
@@ -275,6 +280,7 @@
 			files = (
 				D41746DB1837EA5900F83533 /* Barcode.m in Sources */,
 				D41746AD1837E91900F83533 /* AppDelegate.m in Sources */,
+				D46D5E7C188DC18300E0DF31 /* SettingsViewController.m in Sources */,
 				D41746D81837EA2900F83533 /* ScannerViewController.m in Sources */,
 				D41746A91837E91900F83533 /* main.m in Sources */,
 			);

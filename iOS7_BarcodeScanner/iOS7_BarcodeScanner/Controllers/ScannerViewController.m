@@ -8,6 +8,7 @@
 
 
 #import "ScannerViewController.h"
+#import "SettingsViewController.h"
 #import "Barcode.h"
 @import AVFoundation;   // iOS7 only import style
 
