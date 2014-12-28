@@ -202,6 +202,8 @@ didOutputMetadataObjects:(NSArray *)metadataObjects
     [self stopRunning];
     [self.foundBarcodes addObject:barcode];
     [self showBarcodeAlert:barcode];
+    Barcode *bar = self.foundBarcodes[0];
+    NSLog(@"barcode: %@",bar.getBarcodeData);
 }
 - (void) showBarcodeAlert:(Barcode *)barcode{
     dispatch_async( dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
