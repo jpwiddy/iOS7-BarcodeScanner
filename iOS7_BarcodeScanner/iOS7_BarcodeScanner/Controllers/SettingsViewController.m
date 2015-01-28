@@ -49,6 +49,11 @@
     [self.barcodeTypes addObject:@"org.gs1.EAN-8"];
     [self.barcodeTypes addObject:@"com.intermec.Code93"];
     [self.barcodeTypes addObject:@"org.iso.Code128"];
+    NSString *reqSysVer = @"8.0";
+    NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
+    if ([currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending)
+    	[self.barcodeTypes addObject:@"org.iso.DataMatrix"];
+    
 }
 
 - (void)didReceiveMemoryWarning
