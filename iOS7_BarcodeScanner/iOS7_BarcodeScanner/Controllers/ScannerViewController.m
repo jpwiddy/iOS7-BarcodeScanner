@@ -78,7 +78,7 @@
     NSString *reqSysVer = @"8.0";
     NSString *currSysVer = [[UIDevice currentDevice] systemVersion];
     if ([currSysVer compare:reqSysVer options:NSNumericSearch] != NSOrderedAscending)
-        [self.allowedBarcodeTypes addObject:@"org.iso.DataMatrix"];}
+        [self.allowedBarcodeTypes addObject:@"org.iso.DataMatrix"];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
